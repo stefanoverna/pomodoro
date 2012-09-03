@@ -641,7 +641,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = ShortcutRecorder;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 				ZERO_LINK = YES;
 			};
 			name = Debug;
@@ -670,7 +670,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = ShortcutRecorder;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -681,11 +681,11 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_VERSION = 4.2;
-				"GCC_VERSION[arch=*]" = 4.2;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				"GCC_VERSION[arch=*]" = com.apple.compilers.llvmgcc42;
 				PRODUCT_NAME = "Build ShortcutRecorder.framework";
-				SDKROOT = macosx10.6;
-				"SDKROOT[sdk=macosx10.6][arch=x86_64]" = macosx10.6;
+				SDKROOT = macosx;
+				"SDKROOT[sdk=macosx10.6][arch=x86_64]" = macosx;
 			};
 			name = Debug;
 		};
@@ -695,10 +695,10 @@
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_VERSION = 4.2;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				PRODUCT_NAME = "Build ShortcutRecorder.framework";
-				SDKROOT = macosx10.6;
-				"SDKROOT[sdk=macosx10.6][arch=x86_64]" = macosx10.6;
+				SDKROOT = macosx;
+				"SDKROOT[sdk=macosx10.6][arch=x86_64]" = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -729,7 +729,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = ShortcutRecorder;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 				ZERO_LINK = YES;
 			};
 			name = Debug;
@@ -759,7 +759,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = ShortcutRecorder;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -778,7 +778,7 @@
 				INFOPLIST_FILE = Demo/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = ShortcutRecorder;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
 			};
@@ -795,7 +795,7 @@
 				INFOPLIST_FILE = Demo/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = ShortcutRecorder;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

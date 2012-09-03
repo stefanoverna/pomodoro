@@ -24,6 +24,8 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #import "StatsController.h"
+#import "CHCSVWriter.h"
+#import "NSArray+CHCSVAdditions.h"
 
 @implementation StatsController
 
@@ -231,17 +233,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 		[[NSFileManager defaultManager] createFileAtPath:[sp filename] contents: nil attributes:nil];
 		NSFileHandle* output = [NSFileHandle fileHandleForWritingAtPath:[sp filename]];
 		[output seekToEndOfFile];
-		NSFetchRequest* fetchRequest = [[NSFetchRequest alloc] init];
-		[fetchRequest setEntity:[NSEntityDescription entityForName:@"Pomodoros" inManagedObjectContext:managedObjectContext]];
-		NSError** error = nil;
-		NSArray* results = [managedObjectContext executeFetchRequest:fetchRequest error:error];
-		if (error) {
-			NSLog(@"Error %@", error);
-		} else {
-            
-			[self writeFullExport: output results: results];
-
-		}
+    [output writeData:[[self log] dataUsingEncoding:NSUTF8StringEncoding]];
 		
 		[output synchronizeFile];
 		[output closeFile];
@@ -323,6 +315,44 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
     [managedObjectContext release];
     [super dealloc];
     
+}
+
+- (NSString*) log {
+  NSFetchRequest* fetchRequest = [[NSFetchRequest alloc] init];
+  [fetchRequest setEntity:[NSEntityDescription entityForName:@"Pomodoros" inManagedObjectContext:managedObjectContext]];
+  NSError** error = nil;
+  NSArray* results = [managedObjectContext executeFetchRequest:fetchRequest error:error];
+  NSMutableArray *final = [NSMutableArray array];
+
+  if (error) {
+  } else {
+    for (NSManagedObject* pomo in results) {
+      NSArray *line = [NSArray arrayWithObjects:
+                       [pomo valueForKey:@"name"], 
+                       [pomo valueForKey:@"when"], 
+                       [pomo valueForKey:@"durationMinutes"]
+                       , nil];      
+      [final addObject:line];
+    }
+  }
+  
+  return [final CSVString];
+}
+
+- (NSString*) clearLog {
+  NSFetchRequest* fetchRequest = [[NSFetchRequest alloc] init];
+  [fetchRequest setEntity:[NSEntityDescription entityForName:@"Pomodoros" inManagedObjectContext:managedObjectContext]];
+  NSError** error = nil;
+  NSArray* results = [managedObjectContext executeFetchRequest:fetchRequest error:error];
+  
+  if (error) {
+  } else {
+    for (NSManagedObject* pomo in results) {
+      [managedObjectContext deleteObject: pomo];
+    }
+  }
+  
+  return @"Success";
 }
 
 @end

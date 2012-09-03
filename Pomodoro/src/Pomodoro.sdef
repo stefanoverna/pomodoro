@@ -100,6 +100,16 @@
 			<cocoa class="ResumeCommand"/>            
             <result type="text" description="Action result"/>            
 		</command>
+        
+        <command name="take log" code="POMORlog" description="take log">
+            <cocoa class="LogCommand"/>
+            <result type="text" description="The log"/>
+        </command>
+        
+        <command name="clear" code="POMORclr" description="clear log">
+            <cocoa class="ClearLogCommand"/>
+            <result type="text" description="Action result"/>
+        </command>
     
 	</suite>
     

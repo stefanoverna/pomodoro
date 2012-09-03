@@ -126,6 +126,10 @@
 		69ED6411133BB31F003F59BA /* SmartTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ED6410133BB31F003F59BA /* SmartTimer.m */; };
 		69ED6414133BB502003F59BA /* SmartTimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ED6413133BB502003F59BA /* SmartTimerTests.m */; };
 		69FCF747135729DD003862DC /* ringBreak.wav in Resources */ = {isa = PBXBuildFile; fileRef = 69FCF746135729DD003862DC /* ringBreak.wav */; };
+		E850AD9215F49695009F87EE /* CHCSVWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = E850AD8F15F49695009F87EE /* CHCSVWriter.m */; };
+		E850AD9315F49695009F87EE /* NSArray+CHCSVAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E850AD9115F49695009F87EE /* NSArray+CHCSVAdditions.m */; };
+		E850AD9715F496CE009F87EE /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E850AD9615F496CE009F87EE /* CHCSVParser.m */; };
+		E850AD9A15F496E8009F87EE /* NSString+CHCSVAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E850AD9915F496E8009F87EE /* NSString+CHCSVAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -426,6 +430,15 @@
 		69ED6412133BB502003F59BA /* SmartTimerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartTimerTests.h; sourceTree = "<group>"; };
 		69ED6413133BB502003F59BA /* SmartTimerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartTimerTests.m; sourceTree = "<group>"; };
 		69FCF746135729DD003862DC /* ringBreak.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ringBreak.wav; sourceTree = "<group>"; };
+		E850AD8E15F49695009F87EE /* CHCSVWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVWriter.h; sourceTree = "<group>"; };
+		E850AD8F15F49695009F87EE /* CHCSVWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVWriter.m; sourceTree = "<group>"; };
+		E850AD9015F49695009F87EE /* NSArray+CHCSVAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CHCSVAdditions.h"; sourceTree = "<group>"; };
+		E850AD9115F49695009F87EE /* NSArray+CHCSVAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CHCSVAdditions.m"; sourceTree = "<group>"; };
+		E850AD9415F496CE009F87EE /* CHCSV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSV.h; sourceTree = "<group>"; };
+		E850AD9515F496CE009F87EE /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
+		E850AD9615F496CE009F87EE /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
+		E850AD9815F496E8009F87EE /* NSString+CHCSVAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CHCSVAdditions.h"; sourceTree = "<group>"; };
+		E850AD9915F496E8009F87EE /* NSString+CHCSVAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CHCSVAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -671,6 +684,7 @@
 		698F4713133B719900311E34 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				E850AD8D15F49695009F87EE /* CHCSVParser */,
 				698F4722133B71D700311E34 /* OAuthConsumer.xcodeproj */,
 				698F4718133B71C300311E34 /* BGHUDAppKit.xcodeproj */,
 				698F46FE133B714100311E34 /* ShortcutRecorder.xcodeproj */,
@@ -839,6 +853,23 @@
 				69ED6373133B9D03003F59BA /* Localizable.strings */,
 			);
 			name = Text;
+			sourceTree = "<group>";
+		};
+		E850AD8D15F49695009F87EE /* CHCSVParser */ = {
+			isa = PBXGroup;
+			children = (
+				E850AD9815F496E8009F87EE /* NSString+CHCSVAdditions.h */,
+				E850AD9915F496E8009F87EE /* NSString+CHCSVAdditions.m */,
+				E850AD9415F496CE009F87EE /* CHCSV.h */,
+				E850AD9515F496CE009F87EE /* CHCSVParser.h */,
+				E850AD9615F496CE009F87EE /* CHCSVParser.m */,
+				E850AD8E15F49695009F87EE /* CHCSVWriter.h */,
+				E850AD8F15F49695009F87EE /* CHCSVWriter.m */,
+				E850AD9015F49695009F87EE /* NSArray+CHCSVAdditions.h */,
+				E850AD9115F49695009F87EE /* NSArray+CHCSVAdditions.m */,
+			);
+			name = CHCSVParser;
+			path = externalFw/CHCSVParser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1142,6 +1173,10 @@
 				69D17E1B136C0F6300F5D922 /* ExternalInterruptCommand.m in Sources */,
 				69D17E21136C101900F5D922 /* ResumeCommand.m in Sources */,
 				69D17E24136C103800F5D922 /* InternalInterruptCommand.m in Sources */,
+				E850AD9215F49695009F87EE /* CHCSVWriter.m in Sources */,
+				E850AD9315F49695009F87EE /* NSArray+CHCSVAdditions.m in Sources */,
+				E850AD9715F496CE009F87EE /* CHCSVParser.m in Sources */,
+				E850AD9A15F496E8009F87EE /* NSString+CHCSVAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

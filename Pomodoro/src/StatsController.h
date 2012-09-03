@@ -47,4 +47,7 @@
 - (IBAction) resetDailyStatistics:(id)sender;
 - (IBAction) resetGlobalStatistics:(id)sender;
 
+- (NSString*) log;
+- (NSString*) clearLog;
+
 @end
