@@ -495,6 +495,13 @@
 	
 }
 
+-(NSString*)log {
+    return [stats log];
+}
+
+-(NSString*)clearLog {
+    return [stats clearLog];
+}
 
 #pragma mark ---- Lifecycle methods ----
 

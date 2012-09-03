@@ -141,4 +141,6 @@
 
 -(IBAction) toolBarIconClicked: (id) sender;
 
+-(NSString*) log;
+-(NSString*) clearLog;
 @end
