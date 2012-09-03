@@ -130,6 +130,8 @@
 		E850AD9315F49695009F87EE /* NSArray+CHCSVAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E850AD9115F49695009F87EE /* NSArray+CHCSVAdditions.m */; };
 		E850AD9715F496CE009F87EE /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E850AD9615F496CE009F87EE /* CHCSVParser.m */; };
 		E850AD9A15F496E8009F87EE /* NSString+CHCSVAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E850AD9915F496E8009F87EE /* NSString+CHCSVAdditions.m */; };
+		E850ADA515F4A776009F87EE /* LogCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = E850ADA215F4A776009F87EE /* LogCommand.m */; };
+		E850ADA615F4A776009F87EE /* ClearLogCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = E850ADA415F4A776009F87EE /* ClearLogCommand.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -439,6 +441,10 @@
 		E850AD9615F496CE009F87EE /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
 		E850AD9815F496E8009F87EE /* NSString+CHCSVAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CHCSVAdditions.h"; sourceTree = "<group>"; };
 		E850AD9915F496E8009F87EE /* NSString+CHCSVAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CHCSVAdditions.m"; sourceTree = "<group>"; };
+		E850ADA115F4A776009F87EE /* LogCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogCommand.h; path = src/LogCommand.h; sourceTree = "<group>"; };
+		E850ADA215F4A776009F87EE /* LogCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogCommand.m; path = src/LogCommand.m; sourceTree = "<group>"; };
+		E850ADA315F4A776009F87EE /* ClearLogCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClearLogCommand.h; path = src/ClearLogCommand.h; sourceTree = "<group>"; };
+		E850ADA415F4A776009F87EE /* ClearLogCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClearLogCommand.m; path = src/ClearLogCommand.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -818,6 +824,10 @@
 		69D17DD3136AAC5100F5D922 /* Scriptable */ = {
 			isa = PBXGroup;
 			children = (
+				E850ADA115F4A776009F87EE /* LogCommand.h */,
+				E850ADA215F4A776009F87EE /* LogCommand.m */,
+				E850ADA315F4A776009F87EE /* ClearLogCommand.h */,
+				E850ADA415F4A776009F87EE /* ClearLogCommand.m */,
 				69D17DD4136AAC9F00F5D922 /* StartCommand.h */,
 				69D17DD5136AAC9F00F5D922 /* StartCommand.m */,
 				69D17E13136C0C9C00F5D922 /* ResetCommand.h */,
@@ -1177,6 +1187,8 @@
 				E850AD9315F49695009F87EE /* NSArray+CHCSVAdditions.m in Sources */,
 				E850AD9715F496CE009F87EE /* CHCSVParser.m in Sources */,
 				E850AD9A15F496E8009F87EE /* NSString+CHCSVAdditions.m in Sources */,
+				E850ADA515F4A776009F87EE /* LogCommand.m in Sources */,
+				E850ADA615F4A776009F87EE /* ClearLogCommand.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
